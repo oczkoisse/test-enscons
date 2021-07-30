@@ -1,0 +1,29 @@
+[build-system]
+build-backend = "enscons.api"
+requires = ["pytoml>=0.1", "enscons>=0.23"]
+
+[tool.enscons]
+author = "oczkoisse"
+author_email = "oczkoisse@pm.me"
+classifiers = [
+  "Programming Language :: Python :: 3",
+]
+description = "Testing enscons with tox"
+dependencies = [
+]
+license = "LGPL"
+name = "test-enscons"
+packages = ["test_enscons"]
+src_root = "src"
+version = "0.0.1"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = myenv
+isolated_build = true
+
+[testenv]
+deps = pytest
+commands = pytest
+"""

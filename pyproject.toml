@@ -20,10 +20,5 @@ version = "0.0.1"
 [tool.tox]
 legacy_tox_ini = """
 [tox]
-envlist = myenv
 isolated_build = true
-
-[testenv]
-deps = pytest
-commands = pytest
 """
